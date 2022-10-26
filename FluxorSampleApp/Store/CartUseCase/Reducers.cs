@@ -1,11 +1,10 @@
 ﻿using Fluxor;
 
-namespace FluxorSampleApp.Store.CartUseCase
+namespace FluxorSampleApp.Store.CartUseCase;
+
+public static class Reducers
 {
-    public static class Reducers
-    {
-        [ReducerMethod]
-        public static CartState ReduceIncrementCounterAction(CartState state, AddItemToStoreAction action) =>
-          new CartState(itemsInCart: state.ItemsInCart.Add(action.ItemToAdd));
-    }
+    [ReducerMethod]
+    public static CartState ReduceAddItemToCartAction(CartState state, AddItemToCartAction action) =>
+      new CartState(itemsInCart: state.ItemsInCart.Add(action.ItemToAdd));
 }

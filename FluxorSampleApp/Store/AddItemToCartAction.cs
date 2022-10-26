@@ -1,0 +1,13 @@
+﻿using FluxorSampleApp.Data;
+
+namespace FluxorSampleApp.Store;
+
+public class AddItemToCartAction
+{
+    public Item ItemToAdd { get; }
+
+    public AddItemToCartAction(Item itemToAdd)
+    {
+        this.ItemToAdd = itemToAdd;
+    }
+}
