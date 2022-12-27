@@ -1,5 +1,5 @@
 ﻿using Fluxor;
-using FluxorSampleApp.Data;
+using FluxorSampleApp.Shared;
 using FluxorSampleApp.Store;
 using FluxorSampleApp.Store.CartUseCase;
 using Microsoft.AspNetCore.Components;
@@ -13,6 +13,12 @@ public partial class Items
 
     [Inject]
     public IDispatcher Dispatcher { get; set; }
+    
+    protected override void OnInitialized()
+    {
+        base.OnInitialized();
+        Dispatcher.Dispatch(new FetchItemsInCartAction());
+    }
 
     private string Name { get; set; }
     private decimal Price { get; set; }

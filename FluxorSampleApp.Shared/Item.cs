@@ -1,4 +1,4 @@
-﻿namespace FluxorSampleApp.Data
+﻿namespace FluxorSampleApp.Shared
 {
     public class Item
     {
