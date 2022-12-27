@@ -12,28 +12,38 @@
         <label class="form-label" for="price">Prezzo:</label>
         <input class="form-control" id="price" type="number" @bind-value="Price" />
     </div>
+
     <div class="col-4 align-self-end">
-        <button type="button" class="btn btn-primary" @onclick="AddItem">
-            Aggiungi
+        <button type="button" class="btn btn-primary" @onclick="AddItem" disabled="@CartState.Value.IsSaving">
+            @(CartState.Value.IsSaving ? "Salvando.." : "Aggiungi")
         </button>
     </div>
 </div>
 
 
 <div class="mt-2 row">
-    @if (CartState.Value.ItemsInCart.Any())
+    @if (CartState.Value.IsLoading)
     {
-        @foreach (var item in CartState.Value.ItemsInCart)
-        {
-            <div class="col-4 mt-2">
-                @item.Name - @item.Price €
-            </div>
-        }
+        <span>
+            Aggiornamento del carrello in corso..
+        </span>
     }
     else
     {
-        <span>
-            Non ci sono oggetti nel carrello :(
-        </span>
+        @if (CartState.Value.ItemsInCart.Any())
+        {
+            @foreach (var item in CartState.Value.ItemsInCart)
+            {
+                <div class="col-4 mt-2">
+                    @item.Name - @item.Price €
+                </div>
+            }
+        }
+        else
+        {
+            <span>
+                Non ci sono oggetti nel carrello :(
+            </span>
+        }
     }
 </div>

@@ -1,5 +1,4 @@
-﻿using System.Net.Http.Json;
-using Fluxor;
+﻿using Fluxor;
 using FluxorSampleApp.Shared;
 using FluxorSampleApp.Store;
 using FluxorSampleApp.Store.CartUseCase;
@@ -14,14 +13,11 @@ public partial class Items
 
     [Inject]
     public IDispatcher Dispatcher { get; set; }
-
-    [Inject]
-    public HttpClient HttpClient { get; set; }
     
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        var forecasts = await HttpClient.GetFromJsonAsync<WeatherForecast[]>("/weatherforecast");
-        Console.WriteLine(forecasts);
+        base.OnInitialized();
+        Dispatcher.Dispatch(new FetchItemsInCartAction());
     }
 
     private string Name { get; set; }
