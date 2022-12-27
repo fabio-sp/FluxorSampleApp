@@ -1,4 +1,4 @@
-﻿using FluxorSampleApp.Data;
+﻿using FluxorSampleApp.Shared;
 
 namespace FluxorSampleApp.Store;
 

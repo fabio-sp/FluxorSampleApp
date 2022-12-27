@@ -1,6 +1,6 @@
 ﻿using Fluxor;
-using FluxorSampleApp.Data;
 using System.Collections.Immutable;
+using FluxorSampleApp.Shared;
 
 namespace FluxorSampleApp.Store.CartUseCase;
 

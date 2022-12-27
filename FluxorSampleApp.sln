@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluxorSampleApp", "FluxorSampleApp\FluxorSampleApp.csproj", "{B25AC891-210B-459E-A975-6BF5C3F7A207}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FluxorSampleApp", "FluxorSampleApp\FluxorSampleApp.csproj", "{B25AC891-210B-459E-A975-6BF5C3F7A207}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluxorSampleApp.Api", "FluxorSampleApp.Api\FluxorSampleApp.Api.csproj", "{42582221-131C-4CF4-BB02-B34B948BA500}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluxorSampleApp.Shared", "FluxorSampleApp.Shared\FluxorSampleApp.Shared.csproj", "{95DFAAED-85F9-46EF-8949-88AA7B06C0E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{B25AC891-210B-459E-A975-6BF5C3F7A207}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B25AC891-210B-459E-A975-6BF5C3F7A207}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B25AC891-210B-459E-A975-6BF5C3F7A207}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42582221-131C-4CF4-BB02-B34B948BA500}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42582221-131C-4CF4-BB02-B34B948BA500}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42582221-131C-4CF4-BB02-B34B948BA500}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42582221-131C-4CF4-BB02-B34B948BA500}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95DFAAED-85F9-46EF-8949-88AA7B06C0E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95DFAAED-85F9-46EF-8949-88AA7B06C0E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95DFAAED-85F9-46EF-8949-88AA7B06C0E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95DFAAED-85F9-46EF-8949-88AA7B06C0E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
